@@ -19,7 +19,7 @@ class MainActivity : AppCompatActivity() {
         val repository = CurrenciesRepository()
         val viewModelFactory = ViewModelFactory(repository)
         viewModel = ViewModelProvider(this, viewModelFactory)[MainViewModel::class.java]
-        viewModel.getCurrencies("2022-02-22")
+        viewModel.getCurrencies()
         viewModel.currencyResponse.observe(this, Observer { response ->
             if(response.isSuccessful){
                 //response.body()?.let { myAdapter.setData(it) }

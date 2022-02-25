@@ -1,9 +1,8 @@
 package com.example.testqulix.api
 
-import com.example.testqulix.model.Currency
+import com.example.testqulix.model.ResponseTest
 import retrofit2.Response
 import retrofit2.http.GET
-import retrofit2.http.Query
 
 interface CurrenciesApi {
 
@@ -11,5 +10,5 @@ interface CurrenciesApi {
     suspend fun getCurrencies(
         //@Query("periodicity") periodicity: String,
        // @Query("ondate") date:String
-    ): Response<List<Currency>>
+    ): Response<List<ResponseTest>>
 }
